@@ -30,7 +30,7 @@ namespace XamarinApi
 
             services.AddControllers();
 
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+            services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
             services.AddSwaggerGen(c =>
             {
