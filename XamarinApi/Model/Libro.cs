@@ -3,12 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace XamarinApi.Model
 {
-    public class Autor
+    public class Libro
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public List<Libro> Libros { get; set; }
+        public string Titulo { get; set; }
+        public int AutorId { get; set; }
+        public Autor Author { get; set; }
     }
 }
